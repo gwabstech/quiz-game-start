@@ -1,5 +1,6 @@
 from question_model import Question
 from data import question_data
+from quiz_brain import Quiz
 
 question_bank = []
 
@@ -9,5 +10,8 @@ for question in question_data:
     newQ: Question = Question(question_text, question_answer)
     question_bank.append(newQ)
 
-for q in question_bank:
-    print(q.text, q.answer)
+quiz = Quiz(question_bank)
+quiz.play()
+
+
+
