@@ -28,6 +28,4 @@ class Quiz:
         self.score = 0
         self.question_number = 0
 
-# def play(self):
-# while self.hasNext():
-# self.nextQuestion()
+
