@@ -11,8 +11,19 @@ for question in question_data:
     question_bank.append(newQ)
 
 quiz = Quiz(question_bank)
-while quiz.hasNext():
-    quiz.nextQuestion()
 
 
+def play():
+    while quiz.hasNext():
+        quiz.nextQuestion()
 
+
+play()
+print(f"Your final score is {quiz.score}")
+option = input("Game Over.... type ( R ) to restart the quiz or type (Q) to exit")
+if option.upper() == "R":
+    quiz.restart()
+    play()
+
+else:
+    print("Bye You exit the game")
