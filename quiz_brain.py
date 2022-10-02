@@ -10,9 +10,8 @@ class Quiz:
         option = input(f"{t.text}: True or False").upper()
 
     def hasNext(self):
-        if self.question_number < len(self.question_list):
-            return True
+        return self.question_number < len(self.question_list)-1
 
-    def play(self):
-        while self.hasNext():
-            self.nextQuestion()
+# def play(self):
+# while self.hasNext():
+# self.nextQuestion()

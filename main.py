@@ -11,7 +11,8 @@ for question in question_data:
     question_bank.append(newQ)
 
 quiz = Quiz(question_bank)
-quiz.play()
+while quiz.hasNext():
+    quiz.nextQuestion()
 
 
 
